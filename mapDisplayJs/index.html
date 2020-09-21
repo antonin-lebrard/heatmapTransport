@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>mapdisplay</title>
+    <link rel="stylesheet" href="leaflet.css">
+    <script src="leaflet-src.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="utils.js"></script>
+    <script defer src="utilsClasses.js"></script>
+    <script defer src="index.js"></script>
+</head>
+
+<body>
+<!--<script src="leaflet-src.js"></script>-->
+
+<div id="infosContainer">
+    <!--<div id="mapInfos"></div>-->
+
+    <div style="margin: auto 0 auto 0;">Max Time (s)</div>
+    <input id="maxTimeInput" type="text" title="Max time in seconds" value="1200"/>
+    <div style="margin: auto 0 auto 0;">Departure Time (17:50:35)</div>
+    <input id="departureTimeInput" type="text" title="Departure time" value="17:00:00"/>
+    <input id="heatmapButton" type="button" title="Get Heatmap" value="Get Heatmap"/>
+    <input id="pathsButton" type="button" title="P" value="P"/>
+    <!--<div id="polygonsInfos"></div>-->
+</div>
+<div id="map" style="height: 500px"></div>
+<!--<div id="chosenDeparture"></div>-->
+</body>
+</html>
