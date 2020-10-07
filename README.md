@@ -25,14 +25,16 @@ There is one button next to the `Get Heatmap` one, to display the paths taken to
 
 ### Installation
 
-- Install golang: https://github.com/golang/go/wiki#working-with-go
+Use the correct binary from the [Release page](https://github.com/antonin-lebrard/heatmapTransport/releases), and skip to step 5. Download
+
+1. Install golang: https://github.com/golang/go/wiki#working-with-go
     - There should be a correct installation ready with $GOPATH set and your go binary in your $PATH. It did takes some time for me to do a complete and correct install.
-- `git clone https://github.com/antonin-lebrard/heatmapTransport.git` in your `$GOPATH/src`
-- `cd heatmapTransport`
-- `go build -o heatmap .`
-- Download the full GTFS archive from RATP [here](https://data.ratp.fr/explore/dataset/offre-transport-de-la-ratp-format-gtfs/information/), its the `RATP_GTFS_FULL` link.
-- Extract the archive and take the `stops.txt`, `stop_times.txt`, `transfers.txt` files and put them in `heatmapTransport/ratp`
-- Now execute `./heatmap`. It will takes a long time (and RAM, like ~4Go of it) to gather all the necessary data and construct an adapted graph format.
+1. `git clone https://github.com/antonin-lebrard/heatmapTransport.git` in your `$GOPATH/src`
+1. `cd heatmapTransport`
+1. `go build -o heatmap .`
+1. Download the full GTFS archive from RATP [here](https://data.ratp.fr/explore/dataset/offre-transport-de-la-ratp-format-gtfs/information/), its the `RATP_GTFS_FULL` link.
+1. Extract the archive and take the `stops.txt`, `stop_times.txt`, `transfers.txt` files and put them in `heatmapTransport/ratp`
+1. Now execute `./heatmap`. It will takes a long time (and RAM, like ~4Go of it) to gather all the necessary data and construct an adapted graph format.
    - This step has taken me ~1h30 to do, but at the end of it, it will save the graph into a gigantic text file (1.6 Go for me) which will only takes 20 seconds to reload at the next launch
 
 When `./heatmap` has finished loading the GTFS data and saved its graph to disk (or read it back), the application will open a server which the [`mapDisplayJs`](https://github.com/antonin-lebrard/heatmapTransport/tree/master/mapDisplayJs) part of this project will use.
