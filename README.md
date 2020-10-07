@@ -35,14 +35,14 @@ There is one button next to the `Get Heatmap` one, to display the paths taken to
 - Now execute `./heatmap`. It will takes a long time (and RAM, like ~4Go of it) to gather all the necessary data and construct an adapted graph format.
    - This step has taken me ~1h30 to do, but at the end of it, it will save the graph into a gigantic text file (1.6 Go for me) which will only takes 20 seconds to reload at the next launch
 
-When `./heatmap` has finished loading the GTFS data and saved its graph to disk (or read it back if its the next launch), the application will open a server which the `mapDisplayJs` part of this project will use.
+When `./heatmap` has finished loading the GTFS data and saved its graph to disk (or read it back), the application will open a server which the [`mapDisplayJs`](https://github.com/antonin-lebrard/heatmapTransport/tree/master/mapDisplayJs) part of this project will use.
 
 You can directly launch it with the `file:///` url in your browser, for me it would be `file:////home/antonin/go/src/heatmapTransport/mapDisplayJs/index.html`
 
 ### Credits
 
 Thanks to the [OpenTripPlanner (OTP) project](http://www.opentripplanner.org/) and its [technical documentation](http://docs.opentripplanner.org/en/latest), particularly its [Bibliography page](http://docs.opentripplanner.org/en/latest/Bibliography)
-which helped me to realise this might be possible.
+which helped me to realise this might be possible.<br>
 Thanks to [leaflet](https://leafletjs.com/) as usual the simplest tool to present simple data on a map.
 
 
