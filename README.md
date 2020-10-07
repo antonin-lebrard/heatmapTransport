@@ -8,7 +8,7 @@ This is a tool to interactively generate heatmaps of the time to reach other sta
 
 This project has been developped with the Paris public transports network in mind, precisely the [RATP](https://www.ratp.fr/) part of its network.<br>
 There has been some choices made in the structuration of the data while writing the code and reading the RATP files, and it should pose some problems with other data sources.<br>
-But it should be adaptable if jumping in the code do not scares you too much. The file that handles every data types from the input data is [here](https://github.com/antonin-lebrard/heatmapTransport/blob/master/internal/pkg/csvLoading.go)
+But it should be adaptable if jumping in the code do not scare you too much. The file that handles every data types from the input data is [here](https://github.com/antonin-lebrard/heatmapTransport/blob/master/internal/pkg/csvLoading.go)
 
 The initial data for the stations, timetables, and transfers is taken from here: https://data.ratp.fr/explore/dataset/offre-transport-de-la-ratp-format-gtfs/information/
 
