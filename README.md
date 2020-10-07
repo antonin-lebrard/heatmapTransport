@@ -25,7 +25,7 @@ There is one button next to the `Get Heatmap` one, to display the paths taken to
 
 ### Installation
 
-Use the correct binary from the [Release page](https://github.com/antonin-lebrard/heatmapTransport/releases), and skip to step 5. Download
+Use the correct binary from the [Release page](https://github.com/antonin-lebrard/heatmapTransport/releases), and skip to step 5. (Download ratp archive step)
 
 1. Install golang: https://github.com/golang/go/wiki#working-with-go
     - There should be a correct installation ready with $GOPATH set and your go binary in your $PATH. It did takes some time for me to do a complete and correct install.
