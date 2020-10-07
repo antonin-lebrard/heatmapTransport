@@ -2,8 +2,8 @@ package app
 
 import (
 	"net/http"
-	"personnel/heatmapTransport/internal/app/heatmap"
-	"personnel/heatmapTransport/internal/pkg"
+	"heatmapTransport/internal/app/heatmap"
+	"heatmapTransport/internal/pkg"
 )
 
 func RegisterHandlers(mux *http.ServeMux) {
