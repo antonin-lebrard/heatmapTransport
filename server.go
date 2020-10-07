@@ -6,9 +6,9 @@ import (
 	"log"
 	"net/http"
 	"os"
-	"personnel/heatmapTransport/internal/app"
-	"personnel/heatmapTransport/internal/app/heatmap"
-	"personnel/heatmapTransport/internal/pkg"
+	"heatmapTransport/internal/app"
+	"heatmapTransport/internal/app/heatmap"
+	"heatmapTransport/internal/pkg"
 )
 
 var dataDir = ""
