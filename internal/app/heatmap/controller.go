@@ -4,7 +4,7 @@ import (
 	"errors"
 	"math"
 	"net/http"
-	"heatmapTransport/internal/pkg"
+	"internal/pkg"
 	"regexp"
 	"sort"
 	"strconv"
