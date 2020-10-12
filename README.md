@@ -35,6 +35,7 @@ Use the correct binary from the [Release page](https://github.com/antonin-lebrar
 1. Download the full GTFS archive from RATP [here](https://data.ratp.fr/explore/dataset/offre-transport-de-la-ratp-format-gtfs/information/), its the `RATP_GTFS_FULL` link.
 1. Extract the archive and take the `stops.txt`, `stop_times.txt`, `transfers.txt` files and put them in `heatmapTransport/ratp`
 1. Now execute `./heatmap`. It will takes a long time (and RAM, like ~4Go of it) to gather all the necessary data and construct an adapted graph format.
+   - Optionnaly, I've uploaded the zipped version of `graph.txt` [here](https://drive.google.com/file/d/1mnKOyJo8K0sUeAZF18kIZt8Y0XoMwqJm/view?usp=sharing), it's 500 Mo, but you might prefer taking this route if you have a good connection, and want to do something else in the meantime.
    - This step has taken me ~1h30 to do, but at the end of it, it will save the graph into a gigantic text file (1.6 Go for me) which will only takes 20 seconds to reload at the next launch
 
 When `./heatmap` has finished loading the GTFS data and saved its graph to disk (or read it back), the application will open a server which the [`mapDisplayJs`](https://github.com/antonin-lebrard/heatmapTransport/tree/master/mapDisplayJs) part of this project will use.
