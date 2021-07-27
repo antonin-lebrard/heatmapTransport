@@ -57,6 +57,7 @@ func getNodesForGeneratingHeatmapFromParams(w http.ResponseWriter, r *http.Reque
 	var minPositiveDiff int64 = math.MaxInt64
 	var diff int64
 	var nextStopIdsAlreadyReachableFromNodesFrom = make(map[uint32]bool)
+	// This should find the first transport available at this stop and at the time designated by departureTimestr
 	for _, node := range mappingStopIdToNodes[uint32(stopId64)] {
 		diff = pkg.DiffInSecondsBetweenTwoStopTimes(departureTimestr, node.DepartureTime)
 		if diff > 0 && diff < minPositiveDiff {
@@ -72,9 +73,12 @@ func getNodesForGeneratingHeatmapFromParams(w http.ResponseWriter, r *http.Reque
 		return nil, true
 	}
 
+	// We keep a cache of all stops reachable by the first available transport chosen just above
 	for _, nextNode := range nodesFrom[0].Next {
 		nextStopIdsAlreadyReachableFromNodesFrom[nextNode.Stop.StopId] = true
 	}
+	// Here, we are trying to find all the other available transport options at the stop that connect to stops we did not with the first available transport option.
+	// An example of option not best captured by the first option would be the metro that go in the other direction, or a RER that skip some stations.
 	var present = false
 	var added = false
 	for _, node := range mappingStopIdToNodes[uint32(stopId64)] {
